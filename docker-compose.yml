@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  amir-app:
+    build: .
+    image: amir-app
+    container_name: amir-app
+    ports:
+      - "80:80"
+    networks:
+      - my_network
+
+  another-service:
+    # Replace with the configuration for your other service
+    # image, container_name, ports, etc.
+    networks:
+      - my_network
+
+networks:
+  my_network:
